@@ -10,6 +10,8 @@ import com.linkedin.qa.base.TestBase;
 import com.linkedin.qa.popups.ChatPopUp;
 import com.linkedin.qa.popups.UploadProfilePicPopUp;
 
+import io.qameta.allure.Step;
+
 public class HomePage extends TestBase {
 
 	@FindBy(xpath = "//div[@class='t-16 t-black t-bold']")
@@ -35,52 +37,56 @@ public class HomePage extends TestBase {
 
 	@FindBy(linkText = "Add a photo")
 	WebElement uploadProfilePic;
-	
 
 	// Constructor
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
 
+	@Step("Getting HomePage Title")
 	public String validateHomePageTitle() {
 		return driver.getTitle();
 	}
 
+	@Step("Checking if User Name is present after login")
 	public boolean validateUserName() {
 		return userNameLabel.isDisplayed();
 	}
 
-	public MyNetworkPage clickOnMyNetworks() {
+	@Step("Checking Network Page Button")
+	public void clickOnMyNetworks() {
 		myNetWorkPageLink.click();
-		return new MyNetworkPage();
 	}
 
-	public JobsPage clickOnJobs() {
+	@Step("Checking Jobs Page Button")
+	public void clickOnJobs() {
 		jobsPageLink.click();
-		return new JobsPage();
 	}
 
-	public MessagingPage clickOnMessaging() {
+	@Step("Checking Messaging Page Button")
+	public void clickOnMessaging() {
 		messagingPageLink.click();
-		return new MessagingPage();
 	}
 
-	public NotificationsPage clickOnNotifications() {
+	@Step("Checking Notifications Page Button")
+	public void clickOnNotifications() {
 		notificationsPageLink.click();
-		return new NotificationsPage();
 	}
 
+	@Step("Checking Minimize Chat Button")
 	public ChatPopUp clickOnMinimizeChat() {
 		minimizeChat.click();
 		return new ChatPopUp();
 	}
 	
+	@Step("Verifying Upload profile Picture Funtionality")
 	public UploadProfilePicPopUp uploadprofilePicture() {
 		uploadProfilePic.click();
 		driver.switchTo().activeElement();
 		return new UploadProfilePicPopUp();
 	}
 
+	@Step("Checking Scroll feature on HomePage")
 	public void scrollUsingJSE() throws InterruptedException {
 		driver.findElement(By.xpath("//a[@id='ember18']")).click();
 		JavascriptExecutor jse = (JavascriptExecutor) driver;

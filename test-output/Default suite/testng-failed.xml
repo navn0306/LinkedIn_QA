@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test name="Default test(failed)">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.linkedin.qa.testcases.LoginPageTest">
+      <class name="com.linkedin.qa.testcases.HomePageTest">
         <methods>
-          <include name="setUp"/>
-          <include name="multipleLoginTest" invocation-numbers="2"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyHomePageTitle"/>
         </methods>
-      </class> <!-- com.linkedin.qa.testcases.LoginPageTest -->
+      </class> <!-- com.linkedin.qa.testcases.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

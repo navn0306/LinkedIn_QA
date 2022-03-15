@@ -6,6 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.linkedin.qa.base.TestBase;
 
+import io.qameta.allure.Step;
+
 public class SignUpPage extends TestBase{
 
 	@FindBy(xpath = "//a[contains(text(),'Join now')]")
@@ -24,8 +26,8 @@ public class SignUpPage extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 
+	@Step("Validation of SignUp Functionality of application")
 	public void signUp(String property, String property2) {
-		// TODO Auto-generated method stub
 		joinNowBtn.click();
 		emailOrPhone.sendKeys(property);
 		password.sendKeys(property2);

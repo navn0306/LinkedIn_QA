@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [LinkedIn Test Suite]" guice-stage="DEVELOPMENT">
+  <test name="LinkedIn Test Cases(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.linkedin.qa.testcases.HomePageTest">
+        <methods>
+          <include name="verifyJobsPageLink"/>
+          <include name="verifyMessagingPageLink"/>
+          <include name="verifyNotificationsPageLink"/>
+          <include name="setUp"/>
+          <include name="verifyUserNameIsDisplayed"/>
+          <include name="tearDown"/>
+          <include name="verifyHomePageTitle"/>
+          <include name="minimizeChatWindow"/>
+          <include name="verifyMyNetworkPageLink"/>
+        </methods>
+      </class> <!-- com.linkedin.qa.testcases.HomePageTest -->
+    </classes>
+  </test> <!-- LinkedIn Test Cases(failed) -->
+</suite> <!-- Failed suite [LinkedIn Test Suite] -->

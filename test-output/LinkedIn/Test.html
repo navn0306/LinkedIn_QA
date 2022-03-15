@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>20/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Mar 16 04:02:57 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>312 seconds (312017 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.linkedin.qa.testcases.LoginPageTest.loginPageTitleTestWithLogs()'><b>loginPageTitleTestWithLogs</b><br>Test class: com.linkedin.qa.testcases.LoginPageTest<br>Test method: Verifying Login Page Title and getting the logs</td>
+<td></td>
+<td>0</td>
+<td>com.linkedin.qa.testcases.LoginPageTest@42b02722</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.LoginPageTest.multipleLoginTest()'><b>multipleLoginTest</b><br>Test class: com.linkedin.qa.testcases.LoginPageTest<br>Test method: Verifying Login Functionalilty with mutliple accounts<br>Parameters: aman@gmail.com, aman</td>
+<td></td>
+<td>3</td>
+<td>com.linkedin.qa.testcases.LoginPageTest@42b02722</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.HomePageTest.verifyMyNetworkPageLink()'><b>verifyMyNetworkPageLink</b><br>Test class: com.linkedin.qa.testcases.HomePageTest<br>Test method: Verifying MyNetworks Page button on HomePage</td>
+<td></td>
+<td>0</td>
+<td>com.linkedin.qa.testcases.HomePageTest@528c868</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.HomePageTest.verifyMessagingPageLink()'><b>verifyMessagingPageLink</b><br>Test class: com.linkedin.qa.testcases.HomePageTest<br>Test method: Verifying Messaging Page button on HomePage</td>
+<td></td>
+<td>0</td>
+<td>com.linkedin.qa.testcases.HomePageTest@528c868</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.HomePageTest.scrollPage()'><b>scrollPage</b><br>Test class: com.linkedin.qa.testcases.HomePageTest<br>Test method: Verifying Scroll page Functionality on HomePage</td>
+<td></td>
+<td>31</td>
+<td>com.linkedin.qa.testcases.HomePageTest@528c868</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.SignUpPageTest.test_SignUp()'><b>test_SignUp</b><br>Test class: com.linkedin.qa.testcases.SignUpPageTest<br>Test method: Verifying SignUp functionality of application</td>
+<td></td>
+<td>3</td>
+<td>com.linkedin.qa.testcases.SignUpPageTest@466276d8</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.HomePageTest.uploadProfilePic()'><b>uploadProfilePic</b><br>Test class: com.linkedin.qa.testcases.HomePageTest<br>Test method: Verifying Upload Profile Picture Functionality on HomePage</td>
+<td></td>
+<td>0</td>
+<td>com.linkedin.qa.testcases.HomePageTest@528c868</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.HomePageTest.minimizeChatWindow()'><b>minimizeChatWindow</b><br>Test class: com.linkedin.qa.testcases.HomePageTest<br>Test method: Verifying Minimize Chat Popup button on HomePage</td>
+<td></td>
+<td>0</td>
+<td>com.linkedin.qa.testcases.HomePageTest@528c868</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.LogoutPagetTest.verifyLogout()'><b>verifyLogout</b><br>Test class: com.linkedin.qa.testcases.LogoutPagetTest<br>Test method: Verifying Logout functionality of application</td>
+<td></td>
+<td>0</td>
+<td>com.linkedin.qa.testcases.LogoutPagetTest@5e403b4a</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.HomePageTest.verifyJobsPageLink()'><b>verifyJobsPageLink</b><br>Test class: com.linkedin.qa.testcases.HomePageTest<br>Test method: Verifying Jobs Page button on HomePage</td>
+<td></td>
+<td>0</td>
+<td>com.linkedin.qa.testcases.HomePageTest@528c868</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.LoginPageTest.multipleLoginTest()'><b>multipleLoginTest</b><br>Test class: com.linkedin.qa.testcases.LoginPageTest<br>Test method: Verifying Login Functionalilty with mutliple accounts<br>Parameters: rahul@gmail.com, rahul</td>
+<td></td>
+<td>2</td>
+<td>com.linkedin.qa.testcases.LoginPageTest@42b02722</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.LoginPageTest.multipleLoginTest()'><b>multipleLoginTest</b><br>Test class: com.linkedin.qa.testcases.LoginPageTest<br>Test method: Verifying Login Functionalilty with mutliple accounts<br>Parameters: navneetk23155@gmail.com, Nav@12345</td>
+<td></td>
+<td>13</td>
+<td>com.linkedin.qa.testcases.LoginPageTest@42b02722</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.LoginPageTest.loginPageTitleTest()'><b>loginPageTitleTest</b><br>Test class: com.linkedin.qa.testcases.LoginPageTest<br>Test method: Verifying Login Page Title</td>
+<td></td>
+<td>0</td>
+<td>com.linkedin.qa.testcases.LoginPageTest@42b02722</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.LoginPageTest.loginTest()'><b>loginTest</b><br>Test class: com.linkedin.qa.testcases.LoginPageTest<br>Test method: Verifying Login Functionalilty</td>
+<td></td>
+<td>11</td>
+<td>com.linkedin.qa.testcases.LoginPageTest@42b02722</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.LoginPageTest.test_AfterLogin_TakeScreenshot()'><b>test_AfterLogin_TakeScreenshot</b><br>Test class: com.linkedin.qa.testcases.LoginPageTest<br>Test method: Taking screenshot for the page</td>
+<td></td>
+<td>14</td>
+<td>com.linkedin.qa.testcases.LoginPageTest@42b02722</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.HomePageTest.verifyNotificationsPageLink()'><b>verifyNotificationsPageLink</b><br>Test class: com.linkedin.qa.testcases.HomePageTest<br>Test method: Verifying Notifications Page button on HomePage</td>
+<td></td>
+<td>0</td>
+<td>com.linkedin.qa.testcases.HomePageTest@528c868</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.LoginPageTest.multipleLoginTest()'><b>multipleLoginTest</b><br>Test class: com.linkedin.qa.testcases.LoginPageTest<br>Test method: Verifying Login Functionalilty with mutliple accounts<br>Parameters: xyz@gmail.com, xyz</td>
+<td></td>
+<td>4</td>
+<td>com.linkedin.qa.testcases.LoginPageTest@42b02722</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.LoginPageTest.multipleLoginTest()'><b>multipleLoginTest</b><br>Test class: com.linkedin.qa.testcases.LoginPageTest<br>Test method: Verifying Login Functionalilty with mutliple accounts<br>Parameters: abhi@gmail.com, abhi</td>
+<td></td>
+<td>4</td>
+<td>com.linkedin.qa.testcases.LoginPageTest@42b02722</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.HomePageTest.verifyUserNameIsDisplayed()'><b>verifyUserNameIsDisplayed</b><br>Test class: com.linkedin.qa.testcases.HomePageTest<br>Test method: Verifying User Name on HomePage after Login</td>
+<td></td>
+<td>0</td>
+<td>com.linkedin.qa.testcases.HomePageTest@528c868</td></tr>
+<tr>
+<td title='com.linkedin.qa.testcases.HomePageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.linkedin.qa.testcases.HomePageTest<br>Test method: Verifying HomePage Title</td>
+<td></td>
+<td>0</td>
+<td>com.linkedin.qa.testcases.HomePageTest@528c868</td></tr>
+</table><p>
+</body>
+</html>

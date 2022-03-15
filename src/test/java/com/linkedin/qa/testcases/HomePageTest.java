@@ -1,27 +1,28 @@
 package com.linkedin.qa.testcases;
 
 import org.testng.Assert;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.linkedin.qa.base.TestBase;
+import com.linkedin.qa.listeners.CustomListeners;
 import com.linkedin.qa.pages.HomePage;
-import com.linkedin.qa.pages.JobsPage;
 import com.linkedin.qa.pages.LoginPage;
-import com.linkedin.qa.pages.MessagingPage;
-import com.linkedin.qa.pages.MyNetworkPage;
-import com.linkedin.qa.pages.NotificationsPage;
 import com.linkedin.qa.popups.ChatPopUp;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
+
+@Listeners(CustomListeners.class)
 public class HomePageTest extends TestBase {
 
 	LoginPage loginPage;
 	HomePage homePage;
-	MyNetworkPage myNetworkPageTitle;
-	JobsPage jobsPage;
-	MessagingPage messagingPage;
-	NotificationsPage notificationsPage;
 	ChatPopUp chatPopUp;
 
 	public HomePageTest() {
@@ -32,59 +33,82 @@ public class HomePageTest extends TestBase {
 	public void setUp() {
 		initialization();
 		loginPage = new LoginPage();
-		myNetworkPageTitle = new MyNetworkPage();
-		jobsPage = new JobsPage();
-		messagingPage = new MessagingPage();
-		notificationsPage = new NotificationsPage();
 		chatPopUp = new ChatPopUp();
 
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, description = "Verifying HomePage Title")
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Case Description : Verify HomePage Title on HomePage")
+	@Story("Story Name : Verifying HomePage Title")
 	public void verifyHomePageTitle() {
 		String homePageTitle = homePage.validateHomePageTitle();
-		Assert.assertEquals(homePageTitle, "Feed | LinkedIn", "Homepage title not matching");
+		Assert.assertEquals(homePageTitle, "Wrong Title");
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, description = "Verifying User Name on HomePage after Login")
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Case Description : Verifying User Name on HomePage after Login")
+	@Story("Story Name : Verifying User Name on HomePage after Login")
 	public void verifyUserNameIsDisplayed() {
 		Assert.assertTrue(homePage.validateUserName());
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3, description = "Verifying Minimize Chat Popup button on HomePage")
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Case Description : Verifying Minimize Chat Popup button on HomePage")
+	@Story("Story Name : Verifying Minimize Chat Popup button on HomePage")
 	public void minimizeChatWindow() {
 		chatPopUp = homePage.clickOnMinimizeChat();
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4, description = "Verifying Jobs Page button on HomePage")
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Case Description : Verifying Jobs Page button on HomePage")
+	@Story("Story Name : Verifying Jobs Page button on HomePage")
 	public void verifyJobsPageLink() {
-		jobsPage = homePage.clickOnJobs();
+		homePage.clickOnJobs();
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5, description = "Verifying Messaging Page button on HomePage")
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Case Description : Verifying Messaging Page button on HomePage")
+	@Story("Story Name : Verifying Messaging Page button on HomePage")
 	public void verifyMessagingPageLink() {
-		messagingPage = homePage.clickOnMessaging();
+		homePage.clickOnMessaging();
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6, description = "Verifying Notifications Page button on HomePage")
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Case Description : Verifying Notifications Page button on HomePage")
+	@Story("Story Name : Verifying Notifications Page button on HomePage")
 	public void verifyNotificationsPageLink() {
-		notificationsPage = homePage.clickOnNotifications();
+		homePage.clickOnNotifications();
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 7, description = "Verifying MyNetworks Page button on HomePage")
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Case Description : Verifying MyNetworks Page button on HomePage")
+	@Story("Story Name : Verifying MyNetworks Page button on HomePage")
 	public void verifyMyNetworkPageLink() {
-		myNetworkPageTitle = homePage.clickOnMyNetworks();
+		homePage.clickOnMyNetworks();
 	}
-	
-	@Test
+
+	@Test(priority = 8, description = "Verifying Upload Profile Picture Functionality on HomePage")
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Case Description : Verifying Upload Profile Picture Functionality on HomePage")
+	@Story("Story Name : Verifying Upload Profile Picture Functionality on HomePage")
 	public void uploadProfilePic() {
-		//doubt  
+
 	}
-	
-	@Test
+
+	@Test(priority = 9, description = "Verifying Scroll page Functionality on HomePage")
+	@Severity(SeverityLevel.BLOCKER)
+	@Description("Test Case Description : Verifying Scroll page Functionality on HomePage")
+	@Story("Story Name : Verifying Scroll page Functionality on HomePage")
 	public void scrollPage() throws InterruptedException {
-		homePage.scrollUsingJSE(); 
+		homePage.scrollUsingJSE();
 	}
 
 	@AfterMethod

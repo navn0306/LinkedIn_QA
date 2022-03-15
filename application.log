@@ -1,0 +1,9 @@
+2022-03-16 00:00:29,694  INFO [main] LoginPageTest:47 - entering application URL
+2022-03-16 00:00:29,702  WARN [main] LoginPageTest:48 - Hey this just a warning message
+2022-03-16 00:00:29,703 FATAL [main] LoginPageTest:49 - hey this is just fatal error message
+2022-03-16 00:00:29,703 DEBUG [main] LoginPageTest:50 - this is debug message
+2022-03-16 00:00:29,703  INFO [main] LoginPageTest:51 - ****************************** starting test case *****************************************
+2022-03-16 00:00:29,704  INFO [main] LoginPageTest:52 - ********************************* LinkedInTest *****************************************
+2022-03-16 00:00:29,714  INFO [main] LoginPageTest:55 - login page title is--->LinkedIn: Log In or Sign Up
+2022-03-16 00:00:29,717  INFO [main] LoginPageTest:57 - ****************************** ending test case *****************************************
+2022-03-16 00:00:29,718  INFO [main] LoginPageTest:58 - ******************************** LinkedInTest *****************************************

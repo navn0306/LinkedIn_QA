@@ -7,6 +7,11 @@ import org.testng.annotations.Test;
 import com.linkedin.qa.base.TestBase;
 import com.linkedin.qa.pages.SignUpPage;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
+
 public class SignUpPageTest extends TestBase {
 
 	SignUpPage signUpPage;
@@ -21,7 +26,10 @@ public class SignUpPageTest extends TestBase {
 		signUpPage = new SignUpPage();
 	}
 	
-	@Test
+	@Test(priority = 1, description = "Verifying SignUp functionality of application")
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Case Description : Verifying SignUp functionality of application")
+	@Story("Story Name : Verifying SignUp functionality of application")
 	public void test_SignUp() {
 		signUpPage.signUp(prop.getProperty("newemail"), prop.getProperty("newpass"));
 	}
